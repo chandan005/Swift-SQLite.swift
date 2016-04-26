@@ -5,5 +5,8 @@ use_frameworks!
 
 target 'Ausway' do
 	pod 'SQLite.swift'
+	pod 'Fabric'
+	pod 'TwitterKit'
+	pod 'TwitterCore'
 end
 

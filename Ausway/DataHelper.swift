@@ -296,6 +296,7 @@ class Terminal1DataHelper: SkybusDataHelperProtocol {
         var dates = [NSDate]()
         for are in arr {
             var some = dateFormatter.stringFromDate(NSDate())
+            print(some)
             some.replaceRange(Range<String.Index>(some.endIndex.advancedBy(-5) ..< some.endIndex), with: are)
             let newDate = dateFormatter.dateFromString(some)
             let order = NSCalendar.currentCalendar().compareDate(currentDate, toDate: newDate!, toUnitGranularity: .Minute)

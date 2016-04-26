@@ -41,10 +41,10 @@ class TimeTableViewController: UITableViewController, UINavigationControllerDele
         
         let cell = tableView.dequeueReusableCellWithIdentifier("tables", forIndexPath: indexPath) as! NextTableView
         
-        cell.timeLabel.text = timeTableArray[indexPath.row]
+        cell.timeLabel?.text = timeTableArray[indexPath.row]
         cell.subtitleLabel.text = departureMins[indexPath.row]
         //cell.textLabel?.text = timeTableArray[indexPath.row]
-        //cell.detailTextLabel?.text = "Express service to Southern Cross Station"
+        //cell.subtitleLabel?.text = "Express service to Southern Cross Station"
         
         return cell
 

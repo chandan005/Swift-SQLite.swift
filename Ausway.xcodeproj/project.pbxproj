@@ -24,6 +24,7 @@
 		B54AA2AC1CC0DF99002BDF75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54AA2AA1CC0DF99002BDF75 /* LaunchScreen.storyboard */; };
 		B54AA2B41CC0E9F8002BDF75 /* PopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */; };
 		B58B2CF21CC228C300D0E778 /* NextTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58B2CF11CC228C300D0E778 /* NextTableView.swift */; };
+		B5CF426D1CCE47FF00D0CD2B /* TwitterFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		B54AA2AD1CC0DF99002BDF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverController.swift; sourceTree = "<group>"; };
 		B58B2CF11CC228C300D0E778 /* NextTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTableView.swift; sourceTree = "<group>"; };
+		B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFeedController.swift; sourceTree = "<group>"; };
 		CFBCC8712D075AC880B98697 /* Pods_Ausway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ausway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */,
 				B54807491CC7FEC000E42976 /* SkybusTableController.swift */,
 				B548074B1CC7FECF00E42976 /* TaxiTableController.swift */,
+				B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				B54AA29C1CC0DF99002BDF75 /* Resources */,
 				4F88181E59F1FEC32B5712CB /* Embed Pods Frameworks */,
 				139082F355CD53AA4522260E /* Copy Pods Resources */,
+				B5CF426B1CCE3FC100D0CD2B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -263,6 +267,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B5CF426B1CCE3FC100D0CD2B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c83c45ca13680f9f55a09d16cc5137a4e9f06b60 c6550f1f4fa5b13f9c8600f613277496883318396109e251a316a7b3a287fc30";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -279,6 +296,7 @@
 				B54807461CC7FDDE00E42976 /* SkybusTableView.swift in Sources */,
 				B54AA2A21CC0DF99002BDF75 /* AppDelegate.swift in Sources */,
 				B54807481CC7FDED00E42976 /* TaxiTableView.swift in Sources */,
+				B5CF426D1CCE47FF00D0CD2B /* TwitterFeedController.swift in Sources */,
 				B50A17C71CC5FEC800CCA5F0 /* PassengerDataModel.swift in Sources */,
 				B548074C1CC7FECF00E42976 /* TaxiTableController.swift in Sources */,
 				B5276E0A1CC1E93B00546DAF /* SQLiteDataStore.swift in Sources */,
@@ -397,6 +415,7 @@
 			baseConfigurationReference = 97192F563722ABC71CCB3C7B /* Pods-Ausway.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Ausway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.s3449996.Ausway;

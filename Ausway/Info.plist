@@ -18,8 +18,40 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>au.edu.rmit.s3449996.Ausway</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>melbournecloudstudio://</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>c83c45ca13680f9f55a09d16cc5137a4e9f06b60</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>vYesgJZiOJpgocbVKe79UmYiJ</string>
+					<key>consumerSecret</key>
+					<string>6TI0U6A0yxa5KGPgd0YOhsizoBsaczK43U63JllI2c93bVlurR</string>
+				</dict>
+				<key>KitName</key>
+				<string>Twitter</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

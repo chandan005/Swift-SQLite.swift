@@ -12,9 +12,12 @@ class SkybusTableView: UITableViewCell {
     
     @IBOutlet weak var skybusImage: UIImageView!
     
+    
     @IBOutlet weak var mainLabel: UILabel!
     
+    
     @IBOutlet weak var subtitleLabel: UILabel!
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
